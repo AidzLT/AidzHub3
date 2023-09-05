@@ -44,6 +44,32 @@ do
             loadstring(game:HttpGet(('https://raw.githubusercontent.com/PerfectusMim/dbevo/main/asfasfasfasf'),true))()
         end
     })
+
+Tabs.Main:AddButton({
+        Title = "loopspeed200",
+        Description = "Very important button",
+        Callback = function()
+            local speed = 200
+
+if ( not game:IsLoaded() ) then
+   game.Loaded:Wait()
+end
+
+local runService = game:GetService('RunService')
+local localPlr = game:GetService('Players').LocalPlayer
+
+local localHum = localPlr.Character and localPlr.Character:FindFirstChild('Humanoid')
+localPlr.CharacterAdded:Connect(function(newChar)
+   localHum = newChar:WaitForChild('Humanoid')
+end)
+
+runService.Heartbeat:Connect(function()
+   if ( localHum ) then
+       localHum.WalkSpeed = speed
+   end
+end)
+        end
+    })
 	
 	Tabs.Main:AddButton({
         Title = "Auto Clicker",
