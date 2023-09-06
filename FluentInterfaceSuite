@@ -28,7 +28,7 @@ do
     })
 
  Tabs.Main:AddButton({
-        Title = "ThatsTuffHub",
+        Title = "IshiHubScript",
         Description = "Very important button",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/AidzLT/IshiHubScript/main/punchsimulator"))()
