@@ -27,7 +27,13 @@ do
         Content = "XIN CHAO,TOI LUON CHO BAN 10 DIEM, BAN BIET KHONG?"
     })
 
-
+ Tabs.Main:AddButton({
+        Title = "ThatsTuffHub",
+        Description = "Very important button",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AidzLT/IshiHubScript/main/punchsimulator"))()
+        end
+    })
 
     Tabs.Main:AddButton({
         Title = "ThatsTuffHub",
