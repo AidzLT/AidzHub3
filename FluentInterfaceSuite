@@ -27,6 +27,14 @@ do
         Content = "XIN CHAO,TOI LUON CHO BAN 10 DIEM, BAN BIET KHONG?"
     })
 
+Tabs.Main:AddButton({
+        Title = "OP SCRIPT PUNCH SIM",
+        Description = "Very important button",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPuppyTycoon.lua", true))()
+        end
+    })
+
  Tabs.Main:AddButton({
         Title = "IshiHubScript",
         Description = "Very important button",
