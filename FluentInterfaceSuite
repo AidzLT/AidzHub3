@@ -31,7 +31,7 @@ Tabs.Main:AddButton({
         Title = "OP SCRIPT PUNCH SIM",
         Description = "Very important button",
         Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPuppyTycoon.lua", true))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPunchingSimulator.lua", true))()
         end
     })
 
