@@ -17,10 +17,6 @@ local Tabs = {
     Main = Window:AddTab({ Title = "PunchSimulator", Icon = "" })
 }
 
-local Options = Fluent.Options
-
-do
-
     Tabs.Main:AddParagraph({
         Title = "AidzLTHub",
         Content = "XIN CHAO,TOI LUON CHO BAN 10 DIEM, BAN BIET KHONG?"
