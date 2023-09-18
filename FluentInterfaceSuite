@@ -186,18 +186,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Toggle
 
     Options.MyToggle:SetValue(false)
 	
-	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 7 (+200% Health/-10% Dame)", Default = false })
-   
-    Toggle:OnChanged(function()
-        local args = {
-    [1] = 7
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
-    end)
-
-    Options.MyToggle:SetValue(false)
-	
 	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 8 (+10% Materials/-10% Gems)", Default = false })
    
     Toggle:OnChanged(function()
