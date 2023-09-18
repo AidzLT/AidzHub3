@@ -95,23 +95,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/ma
         end
     })
 
-
-    local Input = Tabs.Main:AddInput("Input", {
-        Title = "Input",
-        Default = "Default",
-        Placeholder = "Placeholder",
-        Numeric = false, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
-        Callback = function(Value)
-            print("Input changed:", Value)
-        end
-    })
-
-    Input:OnChanged(function()
-        print("Input updated:", Input.Value)
-    end)
-end
-
 local Tabs = {
     Main = Window:AddTab({ Title = "JESTER PUNCH SIM", Icon = "" })
 }
@@ -235,6 +218,23 @@ Tabs.Main:AddButton({
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
         end
     })
+
+
+    local Input = Tabs.Main:AddInput("Input", {
+        Title = "Input",
+        Default = "Default",
+        Placeholder = "Placeholder",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+            print("Input changed:", Value)
+        end
+    })
+
+    Input:OnChanged(function()
+        print("Input updated:", Input.Value)
+    end)
+end
 
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
