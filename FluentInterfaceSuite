@@ -14,15 +14,30 @@ local Window = Fluent:CreateWindow({
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "PunchSimulator", Icon = "" })
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "This is a notification",
+        SubContent = "SubContent", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+
+
 
     Tabs.Main:AddParagraph({
         Title = "AidzLTHub",
         Content = "XIN CHAO,TOI LUON CHO BAN 10 DIEM, BAN BIET KHONG?"
     })
 
-Tabs.Main:AddButton({
+
+
+    Tabs.Main:AddButton({
         Title = "OP SCRIPT PUNCH SIM",
         Description = "Very important button",
         Callback = function()
@@ -95,6 +110,132 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/ma
         end
     })
 
+local Tabs = {
+    Main = Window:AddTab({ Title = "Misc", Icon = "" })
+}
+
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 1 (+15% Dame/-5% Gems)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 2 (+20% PetLuck/-10% Gems)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 3 (+10% Dame/-20% PetLuck)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 4 (+1 Pet Equip/-10% Dame)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 5 (+15% Gems/-20% PetLuck)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 6 (+10% Dame/-1 Pet Equip)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 6
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 7 (+200% Health/-10% Dame)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 7
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 8 (+10% Materials/-10% Gems)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 8
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 9 (+33% Gems/-33% Materials)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 9
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+	
+	local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slot 10 (+10% Materials/-10% Dame)", Default = false })
+   
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = 10
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ToggleJesterCard"):FireServer(unpack(args))
+    end)
+
+    Options.MyToggle:SetValue(false)
+   
+    
+	
     local Input = Tabs.Main:AddInput("Input", {
         Title = "Input",
         Default = "Default",
@@ -110,6 +251,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/ma
         print("Input updated:", Input.Value)
     end)
 end
+
 
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
@@ -141,7 +283,7 @@ Window:SelectTab(1)
 Fluent:Notify({
     Title = "Fluent",
     Content = "The script has been loaded.",
-    Duration = 3
+    Duration = 8
 })
 
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
