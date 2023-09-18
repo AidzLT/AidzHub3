@@ -117,6 +117,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/ma
     end)
 end
 
+local Tabs = {
+    Main = Window:AddTab({ Title = "JESTER PUNCH SIM", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
 
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
