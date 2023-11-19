@@ -41,7 +41,7 @@ do
         Title = "OP SCRIPT PUNCH SIM",
         Description = "Very important button",
         Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPunchingSimulator.lua", true))()
+            local a;a=hookfunction(game.HttpGet,function(self,b,...)if tostring(b)=="https://raw.githubusercontent.com/JustAP1ayer/ASalfinUiBackup-/main/OcerLibBACKUP.lua"then return a(self,"https://raw.githubusercontent.com/JustAP1ayer/ASalfinUiBackup-/main/ocerlibbackupnopopup.lua",...)end;return a(self,b,...)end)loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPunchingSimulator.lua",true))()
         end
     })
 
